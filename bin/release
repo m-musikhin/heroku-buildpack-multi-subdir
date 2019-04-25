@@ -4,8 +4,8 @@
 find ./ -type d -a ! \(  -path ./build/libs -o -path ./build -o -path ./ -o -path './.*' \) | xargs rm -rf
 
 ## chown in Docker image
-find ./ \( ! -user herokuishuser -o ! -group herokuishuser \) -print0 \
- | xargs -0 -r chown herokuishuser:herokuishuser
+#find ./ \( ! -user herokuishuser -o ! -group herokuishuser \) -print0 \
+# | xargs -0 -r chown herokuishuser:herokuishuser
 
 if [ -e $1/last_pack_release.out ]; then
   cat $1/last_pack_release.out
